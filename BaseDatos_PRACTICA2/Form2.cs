@@ -15,7 +15,7 @@ namespace BaseDatos_PRACTICA2
     {
         private MySqlConnection conect;
 
-        public Form2(MySqlConnection conect)
+        public Form2 (MySqlConnection conect)
         {
             InitializeComponent();
         }
