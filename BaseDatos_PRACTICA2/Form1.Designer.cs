@@ -34,6 +34,7 @@
             label2 = new Label();
             Acceder = new Button();
             label3 = new Label();
+            labelConexion = new Label();
             SuspendLayout();
             // 
             // textoUsuario
@@ -87,12 +88,21 @@
             label3.Size = new Size(0, 20);
             label3.TabIndex = 5;
             // 
+            // labelConexion
+            // 
+            labelConexion.AutoSize = true;
+            labelConexion.Location = new Point(206, 347);
+            labelConexion.Name = "labelConexion";
+            labelConexion.Size = new Size(0, 20);
+            labelConexion.TabIndex = 6;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.Teal;
             ClientSize = new Size(781, 578);
+            Controls.Add(labelConexion);
             Controls.Add(label3);
             Controls.Add(Acceder);
             Controls.Add(label2);
@@ -116,5 +126,6 @@
         private Label label2;
         private Button Acceder;
         private Label label3;
+        private Label labelConexion;
     }
 }
