@@ -28,26 +28,27 @@
         /// </summary>
         private void InitializeComponent()
         {
-            textBox1 = new TextBox();
-            textBox2 = new TextBox();
+            textoUsuario = new TextBox();
+            textoContrasena = new TextBox();
             label1 = new Label();
             label2 = new Label();
             Acceder = new Button();
+            label3 = new Label();
             SuspendLayout();
             // 
-            // textBox1
+            // textoUsuario
             // 
-            textBox1.Location = new Point(277, 144);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(316, 27);
-            textBox1.TabIndex = 0;
+            textoUsuario.Location = new Point(277, 144);
+            textoUsuario.Name = "textoUsuario";
+            textoUsuario.Size = new Size(316, 27);
+            textoUsuario.TabIndex = 0;
             // 
-            // textBox2
+            // textoContrasena
             // 
-            textBox2.Location = new Point(277, 241);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(316, 27);
-            textBox2.TabIndex = 1;
+            textoContrasena.Location = new Point(277, 241);
+            textoContrasena.Name = "textoContrasena";
+            textoContrasena.Size = new Size(316, 27);
+            textoContrasena.TabIndex = 1;
             // 
             // label1
             // 
@@ -76,6 +77,15 @@
             Acceder.TabIndex = 4;
             Acceder.Text = "ACEPTAR";
             Acceder.UseVisualStyleBackColor = false;
+            Acceder.Click += Acceder_Click;
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Location = new Point(143, 330);
+            label3.Name = "label3";
+            label3.Size = new Size(0, 20);
+            label3.TabIndex = 5;
             // 
             // Form1
             // 
@@ -83,12 +93,13 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.Teal;
             ClientSize = new Size(781, 578);
+            Controls.Add(label3);
             Controls.Add(Acceder);
             Controls.Add(label2);
             Controls.Add(label1);
-            Controls.Add(textBox2);
-            Controls.Add(textBox1);
-            Margin = new Padding(2, 2, 2, 2);
+            Controls.Add(textoContrasena);
+            Controls.Add(textoUsuario);
+            Margin = new Padding(2);
             Name = "Form1";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Form1";
@@ -99,10 +110,11 @@
 
         #endregion
 
-        private TextBox textBox1;
-        private TextBox textBox2;
+        private TextBox textoUsuario;
+        private TextBox textoContrasena;
         private Label label1;
         private Label label2;
         private Button Acceder;
+        private Label label3;
     }
 }
