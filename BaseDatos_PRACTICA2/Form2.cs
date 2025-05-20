@@ -146,5 +146,33 @@ namespace BaseDatos_PRACTICA2
         {
 
         }
+
+        private void btnInsetar_Click(object sender, EventArgs e)
+        {
+            string nombre = textBoxNombre.Text.Trim();
+            string apellidoP = textBoxAp1.Text.Trim();
+            string apellidoM = textBoxAp2.Text.Trim();
+            string puesto = textBoxPuesto.Text.Trim();
+            string departamento = textBoxDep.Text.Trim();
+            string edad = textBoxEdad.Text.Trim();
+            string email = textBoxEmail.Text.Trim();
+            string telefono = textBoxTel.Text.Trim();
+
+            CargarDatos(nombre, apellidoP, apellidoM, puesto, departamento, edad, email, telefono);
+            //Console.WriteLine("Registro insertado correctamente");
+        }
+
+        private void LimpiarCampos()
+        {
+            textBoxNombre.Clear();
+            textBoxAp1.Clear();
+            textBoxAp2.Clear();
+            textBoxPuesto.Clear();
+            textBoxDep.Clear();
+            textBoxEdad.Clear();
+            textBoxEmail.Clear();
+            textBoxTel.Clear();
+        }
+
     }
 }
