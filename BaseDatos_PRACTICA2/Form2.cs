@@ -176,7 +176,7 @@ namespace BaseDatos_PRACTICA2
 
         private void Eliminar_Click(object sender, EventArgs e)
         {
-              if (string.IsNullOrEmpty(idSeleccionado))
+            if (string.IsNullOrEmpty(idSeleccionado))
             {
                 DialogResult resultado = MessageBox.Show(
                     "No hay ninguna fila seleccionada.\n¿Deseas eliminar *todos* los registros?",
@@ -237,6 +237,80 @@ namespace BaseDatos_PRACTICA2
             }
         }
 
+        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0)
+            {
+                DataGridViewRow fila = dataGridView1.Rows[e.RowIndex];
+
+                idSeleccionado = fila.Cells[0].Value.ToString();
+                textBoxNombre.Text = fila.Cells[1].Value.ToString();
+                textBoxAp1.Text = fila.Cells[2].Value.ToString();
+                textBoxAp2.Text = fila.Cells[3].Value.ToString();
+                textBoxPuesto.Text = fila.Cells[4].Value.ToString();
+                textBoxDep.Text = fila.Cells[5].Value.ToString();
+                textBoxEdad.Text = fila.Cells[6].Value.ToString();
+                textBoxEmail.Text = fila.Cells[7].Value.ToString();
+                textBoxTel.Text = fila.Cells[8].Value.ToString();
+            }
+        }
+
+        private void btnEditar_Click_Click(object sender, EventArgs e)
+        {
+            if (string.IsNullOrEmpty(idSeleccionado))
+            {
+                MessageBox.Show("Selecciona un registro primero.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            try
+            {
+                string query = @"
+            UPDATE trabajadores SET
+                Nombre = @nombre,
+                ApellidoP = @apellidoP,
+                ApellidoM = @apellidoM,
+                Puesto = @puesto,
+                Departamento = @departamento,
+                Edad = @edad,
+                email = @correo,
+                telefono = @telefono
+            WHERE id_trabajador = @id";
+
+                using (MySqlCommand comando = new MySqlCommand(query, conect))
+                {
+                    comando.Parameters.AddWithValue("@id", idSeleccionado);
+                    comando.Parameters.AddWithValue("@nombre", textBoxNombre.Text.Trim());
+                    comando.Parameters.AddWithValue("@apellidoP", textBoxAp1.Text.Trim());
+                    comando.Parameters.AddWithValue("@apellidoM", textBoxAp2.Text.Trim());
+                    comando.Parameters.AddWithValue("@puesto", textBoxPuesto.Text.Trim());
+                    comando.Parameters.AddWithValue("@departamento", textBoxDep.Text.Trim());
+                    comando.Parameters.AddWithValue("@edad", textBoxEdad.Text.Trim());
+                    comando.Parameters.AddWithValue("@correo", textBoxEmail.Text.Trim());
+                    comando.Parameters.AddWithValue("@telefono", textBoxTel.Text.Trim());
+
+                    int resultado = comando.ExecuteNonQuery();
+
+                    if (resultado > 0)
+                    {
+                        MessageBox.Show("Registro actualizado correctamente.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        LimpiarCampos();
+                        CargarDatos(); // Recargar datos en el DataGridView
+                        idSeleccionado = "";
+                    }
+                    else
+                    {
+                        MessageBox.Show("No se pudo actualizar el registro.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al editar el registro: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
     }
-}
+    }
+
+
 

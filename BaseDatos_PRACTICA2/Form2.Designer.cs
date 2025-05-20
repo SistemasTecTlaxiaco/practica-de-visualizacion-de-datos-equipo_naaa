@@ -56,6 +56,7 @@
             buttonBuscar = new Button();
             btnInsetar = new Button();
             Eliminar = new Button();
+            btnEditar_Click = new Button();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
@@ -217,8 +218,8 @@
             dataGridView1.RowHeadersWidth = 62;
             dataGridView1.Size = new Size(1265, 207);
             dataGridView1.TabIndex = 17;
+            dataGridView1.CellClick += dataGridView1_CellClick;
             dataGridView1.CellContentClick += dataGridView1_CellContentClick;
-
             // 
             // id_Trabajador
             // 
@@ -312,12 +313,25 @@
             Eliminar.UseVisualStyleBackColor = false;
             Eliminar.Click += Eliminar_Click;
             // 
+            // btnEditar_Click
+            // 
+            btnEditar_Click.BackColor = SystemColors.GradientInactiveCaption;
+            btnEditar_Click.Font = new Font("Trebuchet MS", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnEditar_Click.Location = new Point(750, 664);
+            btnEditar_Click.Name = "btnEditar_Click";
+            btnEditar_Click.Size = new Size(131, 58);
+            btnEditar_Click.TabIndex = 21;
+            btnEditar_Click.Text = "EDITAR";
+            btnEditar_Click.UseVisualStyleBackColor = false;
+            btnEditar_Click.Click += btnEditar_Click_Click;
+            // 
             // Form2
             // 
             AutoScaleDimensions = new SizeF(9F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.ActiveCaption;
             ClientSize = new Size(1370, 749);
+            Controls.Add(btnEditar_Click);
             Controls.Add(Eliminar);
             Controls.Add(btnInsetar);
             Controls.Add(buttonBuscar);
@@ -384,5 +398,7 @@
         {
             // Tu código para manejar el evento aquí
         }
+
+        private Button btnEditar_Click;
     }
 }
