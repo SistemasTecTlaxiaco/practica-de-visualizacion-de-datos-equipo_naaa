@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "D:\\CLASES ACTUALES 🥴\\4 SEMESTRE\\Topicos avanzados de çprogramacion\\tema 4\\practica2\\practica-de-visualizacion-de-datos-equipo_naaa\\BaseDatos_PRACTICA2\\BaseDatos_PRACTICA2.csproj": {}
+    "C:\\Users\\abeor\\Desktop\\OneDrive\\Documentos\\01TECNOLOGICO\\TOPICOS AVANZADAS\\SPRINT 4\\clone2\\practica-de-visualizacion-de-datos-equipo_naaa\\BaseDatos_PRACTICA2\\BaseDatos_PRACTICA2.csproj": {}
   },
   "projects": {
-    "D:\\CLASES ACTUALES 🥴\\4 SEMESTRE\\Topicos avanzados de çprogramacion\\tema 4\\practica2\\practica-de-visualizacion-de-datos-equipo_naaa\\BaseDatos_PRACTICA2\\BaseDatos_PRACTICA2.csproj": {
+    "C:\\Users\\abeor\\Desktop\\OneDrive\\Documentos\\01TECNOLOGICO\\TOPICOS AVANZADAS\\SPRINT 4\\clone2\\practica-de-visualizacion-de-datos-equipo_naaa\\BaseDatos_PRACTICA2\\BaseDatos_PRACTICA2.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\CLASES ACTUALES 🥴\\4 SEMESTRE\\Topicos avanzados de çprogramacion\\tema 4\\practica2\\practica-de-visualizacion-de-datos-equipo_naaa\\BaseDatos_PRACTICA2\\BaseDatos_PRACTICA2.csproj",
+        "projectUniqueName": "C:\\Users\\abeor\\Desktop\\OneDrive\\Documentos\\01TECNOLOGICO\\TOPICOS AVANZADAS\\SPRINT 4\\clone2\\practica-de-visualizacion-de-datos-equipo_naaa\\BaseDatos_PRACTICA2\\BaseDatos_PRACTICA2.csproj",
         "projectName": "BaseDatos_PRACTICA2",
-        "projectPath": "D:\\CLASES ACTUALES 🥴\\4 SEMESTRE\\Topicos avanzados de çprogramacion\\tema 4\\practica2\\practica-de-visualizacion-de-datos-equipo_naaa\\BaseDatos_PRACTICA2\\BaseDatos_PRACTICA2.csproj",
-        "packagesPath": "C:\\Users\\sahid\\.nuget\\packages\\",
-        "outputPath": "D:\\CLASES ACTUALES 🥴\\4 SEMESTRE\\Topicos avanzados de çprogramacion\\tema 4\\practica2\\practica-de-visualizacion-de-datos-equipo_naaa\\BaseDatos_PRACTICA2\\obj\\",
+        "projectPath": "C:\\Users\\abeor\\Desktop\\OneDrive\\Documentos\\01TECNOLOGICO\\TOPICOS AVANZADAS\\SPRINT 4\\clone2\\practica-de-visualizacion-de-datos-equipo_naaa\\BaseDatos_PRACTICA2\\BaseDatos_PRACTICA2.csproj",
+        "packagesPath": "C:\\Users\\abeor\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\abeor\\Desktop\\OneDrive\\Documentos\\01TECNOLOGICO\\TOPICOS AVANZADAS\\SPRINT 4\\clone2\\practica-de-visualizacion-de-datos-equipo_naaa\\BaseDatos_PRACTICA2\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\sahid\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\abeor\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -44,7 +44,7 @@
           "auditLevel": "low",
           "auditMode": "direct"
         },
-        "SdkAnalysisLevel": "9.0.100"
+        "SdkAnalysisLevel": "9.0.200"
       },
       "frameworks": {
         "net8.0-windows7.0": {
@@ -74,7 +74,7 @@
               "privateAssets": "none"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.102/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.201/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

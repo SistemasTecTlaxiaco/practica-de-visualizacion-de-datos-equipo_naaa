@@ -174,5 +174,69 @@ namespace BaseDatos_PRACTICA2
             textBoxTel.Clear();
         }
 
+        private void Eliminar_Click(object sender, EventArgs e)
+        {
+              if (string.IsNullOrEmpty(idSeleccionado))
+            {
+                DialogResult resultado = MessageBox.Show(
+                    "No hay ninguna fila seleccionada.\n¿Deseas eliminar *todos* los registros?",
+                    "Confirmación",
+                    MessageBoxButtons.YesNo,
+                    MessageBoxIcon.Warning);
+
+                if (resultado == DialogResult.Yes)
+                {
+                    try
+                    {
+                        string query = "DELETE FROM trabajadores";
+
+                        using (MySqlCommand comando = new MySqlCommand(query, conect))
+                        {
+                            comando.ExecuteNonQuery();
+                        }
+
+                        MessageBox.Show("Todos los registros fueron eliminados correctamente.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        CargarDatos();
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("Error al eliminar todos los registros: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                }
+            }
+            else
+            {
+                DialogResult resultado = MessageBox.Show(
+                    "¿Estás seguro de que deseas eliminar el registro seleccionado?",
+                    "Confirmación",
+                    MessageBoxButtons.YesNo,
+                    MessageBoxIcon.Warning);
+
+                if (resultado == DialogResult.Yes)
+                {
+                    try
+                    {
+                        string query = "DELETE FROM trabajadores WHERE id_trabajador = @id";
+
+                        using (MySqlCommand comando = new MySqlCommand(query, conect))
+                        {
+                            comando.Parameters.AddWithValue("@id", idSeleccionado);
+                            comando.ExecuteNonQuery();
+                        }
+
+                        MessageBox.Show("Registro eliminado correctamente.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        idSeleccionado = "";
+                        LimpiarCampos();
+                        CargarDatos();
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("Error al eliminar el registro: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                }
+            }
+        }
+
     }
 }
+
