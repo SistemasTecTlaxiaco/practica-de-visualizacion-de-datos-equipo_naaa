@@ -54,6 +54,8 @@
             Email = new DataGridViewTextBoxColumn();
             Tel = new DataGridViewTextBoxColumn();
             buttonBuscar = new Button();
+            btnInsetar = new Button();
+            Eliminar = new Button();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
@@ -63,7 +65,7 @@
             labelNombre.Font = new Font("Britannic Bold", 10F, FontStyle.Regular, GraphicsUnit.Point, 0);
             labelNombre.Location = new Point(35, 45);
             labelNombre.Name = "labelNombre";
-            labelNombre.Size = new Size(99, 22);
+            labelNombre.Size = new Size(83, 19);
             labelNombre.TabIndex = 0;
             labelNombre.Text = "NOMBRE: ";
             labelNombre.Click += label1_Click;
@@ -74,7 +76,7 @@
             labelApP.Font = new Font("Britannic Bold", 10F, FontStyle.Regular, GraphicsUnit.Point, 0);
             labelApP.Location = new Point(35, 117);
             labelApP.Name = "labelApP";
-            labelApP.Size = new Size(196, 22);
+            labelApP.Size = new Size(166, 19);
             labelApP.TabIndex = 1;
             labelApP.Text = "APELLIDO PATERNO: ";
             // 
@@ -84,7 +86,7 @@
             labelApM.Font = new Font("Britannic Bold", 10F, FontStyle.Regular, GraphicsUnit.Point, 0);
             labelApM.Location = new Point(35, 185);
             labelApM.Name = "labelApM";
-            labelApM.Size = new Size(199, 22);
+            labelApM.Size = new Size(168, 19);
             labelApM.TabIndex = 2;
             labelApM.Text = "APELLIDO MATERNO: ";
             // 
@@ -94,7 +96,7 @@
             labelEdad.Font = new Font("Britannic Bold", 10F, FontStyle.Regular, GraphicsUnit.Point, 0);
             labelEdad.Location = new Point(35, 265);
             labelEdad.Name = "labelEdad";
-            labelEdad.Size = new Size(64, 22);
+            labelEdad.Size = new Size(54, 19);
             labelEdad.TabIndex = 3;
             labelEdad.Text = "EDAD:";
             labelEdad.Click += label3_Click;
@@ -105,7 +107,7 @@
             labelDep.Font = new Font("Britannic Bold", 10F, FontStyle.Regular, GraphicsUnit.Point, 0);
             labelDep.Location = new Point(750, 45);
             labelDep.Name = "labelDep";
-            labelDep.Size = new Size(158, 22);
+            labelDep.Size = new Size(133, 19);
             labelDep.TabIndex = 4;
             labelDep.Text = "DEPARTAMENTO:";
             // 
@@ -115,7 +117,7 @@
             labelPuesto.Font = new Font("Britannic Bold", 10F, FontStyle.Regular, GraphicsUnit.Point, 0);
             labelPuesto.Location = new Point(750, 117);
             labelPuesto.Name = "labelPuesto";
-            labelPuesto.Size = new Size(91, 22);
+            labelPuesto.Size = new Size(77, 19);
             labelPuesto.TabIndex = 5;
             labelPuesto.Text = "PUESTO: ";
             // 
@@ -125,7 +127,7 @@
             labelEmail.Font = new Font("Britannic Bold", 10F, FontStyle.Regular, GraphicsUnit.Point, 0);
             labelEmail.Location = new Point(750, 185);
             labelEmail.Name = "labelEmail";
-            labelEmail.Size = new Size(69, 22);
+            labelEmail.Size = new Size(58, 19);
             labelEmail.TabIndex = 6;
             labelEmail.Text = "EMAIL:";
             // 
@@ -135,7 +137,7 @@
             labelTel.Font = new Font("Britannic Bold", 10F, FontStyle.Regular, GraphicsUnit.Point, 0);
             labelTel.Location = new Point(750, 265);
             labelTel.Name = "labelTel";
-            labelTel.Size = new Size(106, 22);
+            labelTel.Size = new Size(90, 19);
             labelTel.TabIndex = 7;
             labelTel.Text = "TELEFONO:";
             // 
@@ -144,7 +146,7 @@
             textBoxAp1.BackColor = SystemColors.InactiveCaption;
             textBoxAp1.Location = new Point(233, 109);
             textBoxAp1.Name = "textBoxAp1";
-            textBoxAp1.Size = new Size(401, 28);
+            textBoxAp1.Size = new Size(401, 25);
             textBoxAp1.TabIndex = 9;
             textBoxAp1.TextChanged += textBox1_TextChanged;
             // 
@@ -153,7 +155,7 @@
             textBoxAp2.BackColor = SystemColors.InactiveCaption;
             textBoxAp2.Location = new Point(233, 185);
             textBoxAp2.Name = "textBoxAp2";
-            textBoxAp2.Size = new Size(401, 28);
+            textBoxAp2.Size = new Size(401, 25);
             textBoxAp2.TabIndex = 10;
             // 
             // textBoxEdad
@@ -161,7 +163,7 @@
             textBoxEdad.BackColor = SystemColors.InactiveCaption;
             textBoxEdad.Location = new Point(233, 257);
             textBoxEdad.Name = "textBoxEdad";
-            textBoxEdad.Size = new Size(401, 28);
+            textBoxEdad.Size = new Size(401, 25);
             textBoxEdad.TabIndex = 11;
             // 
             // textBoxNombre
@@ -169,7 +171,7 @@
             textBoxNombre.BackColor = SystemColors.InactiveCaption;
             textBoxNombre.Location = new Point(233, 40);
             textBoxNombre.Name = "textBoxNombre";
-            textBoxNombre.Size = new Size(401, 28);
+            textBoxNombre.Size = new Size(401, 25);
             textBoxNombre.TabIndex = 12;
             textBoxNombre.TextChanged += textBox4_TextChanged;
             // 
@@ -178,7 +180,7 @@
             textBoxDep.BackColor = SystemColors.InactiveCaption;
             textBoxDep.Location = new Point(935, 40);
             textBoxDep.Name = "textBoxDep";
-            textBoxDep.Size = new Size(401, 28);
+            textBoxDep.Size = new Size(401, 25);
             textBoxDep.TabIndex = 13;
             // 
             // textBoxPuesto
@@ -186,7 +188,7 @@
             textBoxPuesto.BackColor = SystemColors.InactiveCaption;
             textBoxPuesto.Location = new Point(935, 112);
             textBoxPuesto.Name = "textBoxPuesto";
-            textBoxPuesto.Size = new Size(401, 28);
+            textBoxPuesto.Size = new Size(401, 25);
             textBoxPuesto.TabIndex = 14;
             // 
             // textBoxEmail
@@ -194,7 +196,7 @@
             textBoxEmail.BackColor = SystemColors.InactiveCaption;
             textBoxEmail.Location = new Point(935, 180);
             textBoxEmail.Name = "textBoxEmail";
-            textBoxEmail.Size = new Size(401, 28);
+            textBoxEmail.Size = new Size(401, 25);
             textBoxEmail.TabIndex = 15;
             // 
             // textBoxTel
@@ -202,7 +204,7 @@
             textBoxTel.BackColor = SystemColors.InactiveCaption;
             textBoxTel.Location = new Point(935, 257);
             textBoxTel.Name = "textBoxTel";
-            textBoxTel.Size = new Size(401, 28);
+            textBoxTel.Size = new Size(401, 25);
             textBoxTel.TabIndex = 16;
             // 
             // dataGridView1
@@ -215,6 +217,8 @@
             dataGridView1.RowHeadersWidth = 62;
             dataGridView1.Size = new Size(1265, 207);
             dataGridView1.TabIndex = 17;
+            dataGridView1.CellContentClick += dataGridView1_CellContentClick;
+
             // 
             // id_Trabajador
             // 
@@ -284,12 +288,38 @@
             buttonBuscar.UseVisualStyleBackColor = false;
             buttonBuscar.Click += buttonBuscar_Click;
             // 
+            // btnInsetar
+            // 
+            btnInsetar.BackColor = SystemColors.GradientInactiveCaption;
+            btnInsetar.Font = new Font("Trebuchet MS", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnInsetar.Location = new Point(302, 663);
+            btnInsetar.Name = "btnInsetar";
+            btnInsetar.Size = new Size(149, 58);
+            btnInsetar.TabIndex = 19;
+            btnInsetar.Text = "INSERTAR";
+            btnInsetar.UseVisualStyleBackColor = false;
+            btnInsetar.Click += btnInsetar_Click;
+            // 
+            // Eliminar
+            // 
+            Eliminar.BackColor = SystemColors.GradientInactiveCaption;
+            Eliminar.Font = new Font("Trebuchet MS", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            Eliminar.Location = new Point(521, 663);
+            Eliminar.Name = "Eliminar";
+            Eliminar.Size = new Size(149, 58);
+            Eliminar.TabIndex = 20;
+            Eliminar.Text = "ELIMINAR";
+            Eliminar.UseVisualStyleBackColor = false;
+            Eliminar.Click += Eliminar_Click;
+            // 
             // Form2
             // 
-            AutoScaleDimensions = new SizeF(10F, 23F);
+            AutoScaleDimensions = new SizeF(9F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.ActiveCaption;
-            ClientSize = new Size(1396, 778);
+            ClientSize = new Size(1370, 749);
+            Controls.Add(Eliminar);
+            Controls.Add(btnInsetar);
             Controls.Add(buttonBuscar);
             Controls.Add(dataGridView1);
             Controls.Add(textBoxTel);
@@ -348,5 +378,11 @@
         private DataGridViewTextBoxColumn Email;
         private DataGridViewTextBoxColumn Tel;
         private Button buttonBuscar;
+        private Button btnInsetar;
+        private Button Eliminar;
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            // Tu código para manejar el evento aquí
+        }
     }
 }
