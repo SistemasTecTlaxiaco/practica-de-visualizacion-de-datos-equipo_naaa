@@ -131,7 +131,7 @@ namespace BaseDatos_PRACTICA2
             string departamento = textBoxDep.Text.Trim();
             string edad = textBoxEdad.Text.Trim();
             string email = textBoxEmail.Text.Trim();
-            string telefono = textBoxTel.Text.Trim();GridItem 
+            string telefono = textBoxTel.Text.Trim(); GridItem
 
             CargarDatos(nombre, apellidoP, apellidoM, puesto, departamento, edad, email, telefono);
 

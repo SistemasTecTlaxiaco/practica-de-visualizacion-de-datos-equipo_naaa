@@ -131,7 +131,7 @@
             labelEmail.TabIndex = 6;
             labelEmail.Text = "EMAIL:";
             // 
-            // labelTel
+            // labelTel;
             // 
             labelTel.AutoSize = true;
             labelTel.Font = new Font("Britannic Bold", 10F, FontStyle.Regular, GraphicsUnit.Point, 0);
@@ -382,7 +382,7 @@
         private Button Eliminar;
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            // Tu código para manejar el evento aquí
+            
         }
     }
 }
